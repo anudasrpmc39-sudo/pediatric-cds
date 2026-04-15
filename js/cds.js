@@ -8,13 +8,13 @@ function runCDS(){
   let result = "";
 
   if(fever && plate){
-    result = "Suspected Dengue → Avoid NSAIDs";
+    result = "Suspected Dengue → Use Paracetamol only";
   }
   else if(cough && fast){
     result = "Pneumonia → Start Amoxicillin";
   }
   else if(fever){
-    result = "Viral → No antibiotic";
+    result = "Likely Viral → No antibiotic";
   }
   else{
     result = "Supportive care";
