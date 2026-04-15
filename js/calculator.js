@@ -1,16 +1,3 @@
-function initDrugs(){
-  const select = document.getElementById("drugSelect");
-
-  select.innerHTML = "";
-
-  drugs.forEach(d=>{
-    let opt = document.createElement("option");
-    opt.value = d.name;
-    opt.textContent = d.name;
-    select.appendChild(opt);
-  });
-}
-
 function calculate(){
 
   let drugName = document.getElementById("drugSelect").value;
@@ -18,26 +5,18 @@ function calculate(){
 
   let weight = parseFloat(document.getElementById("weight").value);
 
-  if(!weight){
-    alert("Enter weight");
+  // 👉 ADD HERE
+  let age = parseFloat(document.getElementById("age").value);
+  let ageUnit = document.getElementById("ageUnit").value;
+
+  if(ageUnit === "years"){
+    age = age * 12;
+  }
+
+  if(!weight || !age){
+    alert("Enter age and weight");
     return;
   }
 
-  let total = weight * drug.dose;
-  let perDose = total / drug.freq;
-
-  let ml = "N/A";
-  let drops = "N/A";
-
-  if(drug.mg5 > 0){
-    ml = perDose / (drug.mg5/5);
-    drops = ml * 20;
-  }
-
-  document.getElementById("output").innerHTML =
-    "Dose: " + perDose.toFixed(1) + " mg<br>" +
-    "Volume: " + (typeof ml==="number" ? ml.toFixed(1)+" mL" : ml) + "<br>" +
-    "Drops: " + (typeof drops==="number" ? drops.toFixed(0) : drops);
+  // rest of your calculation...
 }
-
-document.addEventListener("DOMContentLoaded", initDrugs);
