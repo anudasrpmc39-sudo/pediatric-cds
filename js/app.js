@@ -11,7 +11,11 @@ function calculate(){
   let total = weight * drug.dose;
   let perDose = total / drug.freq;
 
-  let ml = perDose / (drug.mg5/5);
+ let ml = "N/A";
+
+if(drug.mg5 > 0){
+  ml = (perDose / (drug.mg5/5)).toFixed(1);
+}
 
   document.getElementById("output").innerHTML =
   `Dose: ${perDose.toFixed(1)} mg<br>
