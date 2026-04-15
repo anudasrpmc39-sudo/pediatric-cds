@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+  <h2>Pediatric CDS</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="calculator.html">Dose Calculator</a>
+    <a href="cds.html">CDS</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+  
+<head>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/cds.js"></script>
+</head>
+<body>
+
+<header>
+<nav>
+<a href="index.html">Home</a>
+<a href="calculator.html">Calculator</a>
+<a href="cds.html">CDS</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>Clinical Decision Support</h3>
+
+<label><input type="checkbox" id="fever"> Fever</label><br>
+<label><input type="checkbox" id="cough"> Cough</label><br>
+<label><input type="checkbox" id="fast"> Fast Breathing</label><br>
+<label><input type="checkbox" id="platelet"> Low Platelet</label><br>
+
+<button onclick="runCDS()">Evaluate</button>
+
+<div id="result"></div>
+</div>
+
+</div>
+
+<footer>© Pediatric CDS</footer>
+
+</body>
+</html>
