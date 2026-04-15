@@ -1,15 +1,11 @@
-
-
 <!DOCTYPE html>
-
-
-
-<html> 
+<html>
 <head>
 <link rel="stylesheet" href="css/style.css">
 <script src="js/drugs.js"></script>
-<script src="js/app.js"></script>
+<script src="js/calculator.js"></script>
 </head>
+
 <body>
 
 <header>
@@ -27,30 +23,15 @@
 
 <select id="drugSelect"></select>
 
-<input type="number" id="age" placeholder="Age">
-<select id="ageUnit">
-<option value="months">Months</option>
-<option value="years">Years</option>
-</select>
-
-<input type="number" id="weight" placeholder="Weight">
-<select id="weightUnit">
-<option value="kg">kg</option>
-<option value="lb">lb</option>
-</select>
+<input type="number" id="weight" placeholder="Weight (kg)">
 
 <button onclick="calculate()">Calculate</button>
 
 <div id="output"></div>
+
 </div>
 
 </div>
-<script src="js/drugs.js"></script>
-<script src="js/app.js"></script>
-
-<script>
-initDrugs();
-</script>
 
 </body>
 </html>
